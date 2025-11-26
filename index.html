@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Peter Ekelund - Developer & Tech Enthusiast">
-    <title>pekelund.dev</title>
+    <meta name="description" content="pekelund.dev - Peter Ekelund, utvecklare och teknikentusiast. Resurser om programmering, webbutveckling och modern teknologi.">
+    <title>pekelund.dev - Utvecklare & Teknikentusiast</title>
     <style>
         * {
             margin: 0;
@@ -19,19 +19,47 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             padding: 20px;
         }
 
+        nav {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 15px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             padding: 60px 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            text-align: center;
         }
 
         h1 {
@@ -39,6 +67,7 @@
             margin-bottom: 10px;
             color: #667eea;
             font-weight: 700;
+            text-align: center;
         }
 
         .subtitle {
@@ -46,13 +75,25 @@
             color: #666;
             margin-bottom: 30px;
             font-weight: 300;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+            color: #764ba2;
+            font-weight: 600;
         }
 
         .description {
             font-size: 1.1rem;
             color: #555;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             line-height: 1.8;
+        }
+
+        .description p {
+            margin-bottom: 15px;
         }
 
         .links {
@@ -93,12 +134,55 @@
             color: white;
         }
 
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
         .footer {
             margin-top: 50px;
             padding-top: 30px;
             border-top: 1px solid #e0e0e0;
             color: #888;
             font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
         }
 
         .adsbygoogle {
@@ -106,11 +190,6 @@
         }
 
         @media (max-width: 768px) {
-            body {
-                align-items: flex-start;
-                padding-top: 40px;
-            }
-
             h1 {
                 font-size: 2.5rem;
             }
@@ -129,18 +208,19 @@
 
             .link-button {
                 width: 100%;
+                text-align: center;
             }
 
             .adsbygoogle {
                 margin: 20px 0;
             }
+
+            nav ul {
+                gap: 15px;
+            }
         }
 
         @media (max-width: 480px) {
-            body {
-                padding-top: 20px;
-            }
-
             h1 {
                 font-size: 2rem;
             }
@@ -162,16 +242,52 @@
             }
         }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263264917660441"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263264917660441" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="om.html">Om Oss</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="integritet.html">Integritetspolicy</a></li>
+            <li><a href="villkor.html">Villkor</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <h1>pekelund.dev</h1>
-        <p class="subtitle">Developer & Tech Enthusiast</p>
+        <p class="subtitle">Utvecklare & Teknikentusiast</p>
         
         <div class="description">
-            <p>Welcome! I'm passionate about building innovative solutions and exploring new technologies. This space showcases my journey in software development and tech.</p>
+            <p>Välkommen till pekelund.dev! Denna webbplats är skapad och drivs av Peter Ekelund, en passionerad mjukvaruutvecklare med djup erfarenhet inom programmering och modern webbutveckling. Syftet med denna plattform är att fungera som ett nav för tekniska resurser, insikter och projekt inom mjukvaruutveckling.</p>
+
+            <p>På pekelund.dev hittar du information om mina senaste projekt, tekniska guider och erfarenheter från mitt arbete inom IT-branschen. Jag tror starkt på att dela kunskap och erfarenheter för att hjälpa andra utvecklare på deras tekniska resa. Oavsett om du är nybörjare som vill lära dig grunderna i programmering eller en erfaren utvecklare som söker nya perspektiv, strävar jag efter att erbjuda värdefulla resurser.</p>
+
+            <h2>Vad Vi Erbjuder</h2>
+            <p>Min expertis spänner över flera områden inom mjukvaruutveckling, inklusive backend-utveckling, frontend-design, och systemarkitektur. Jag arbetar kontinuerligt med att uppdatera mina kunskaper och hålla mig informerad om de senaste trenderna och verktygen inom teknikbranschen. På denna webbplats delar jag med mig av praktiska lösningar och insikter som jag samlat på mig genom åren.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Tekniska Projekt</h3>
+                <p>Utforska mina senaste utvecklingsprojekt och open source-bidrag på GitHub.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Webbutveckling</h3>
+                <p>Resurser och insikter om modern webbutveckling och bästa praxis.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Programmeringslösningar</h3>
+                <p>Praktiska kodexempel och lösningar på vanliga tekniska utmaningar.</p>
+            </div>
+        </div>
+
+        <div class="description">
+            <h2>Transparens och Kvalitet</h2>
+            <p>Kvalitet och tillförlitlighet är grundpelare i allt jag skapar. Jag strävar efter att leverera genomtänkt och väldokumenterat innehåll som verkligen gör skillnad. Transparens är också viktigt för mig – jag är tydlig med hur denna webbplats fungerar och hur besökarnas integritet hanteras. Du kan läsa mer om detta i vår <a href="integritet.html">integritetspolicy</a>.</p>
+
+            <p>Har du frågor, förslag eller vill du diskutera ett potentiellt samarbete? Jag välkomnar all feedback och ser fram emot att höra från dig. Besök gärna <a href="kontakt.html">kontaktsidan</a> för att komma i kontakt med mig, eller utforska mina projekt på GitHub nedan.</p>
         </div>
 
         <!-- Ad Unit -->
@@ -187,11 +303,17 @@
 
         <div class="links">
             <a href="https://github.com/pekelund-dev" class="link-button" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:contact@pekelund.dev" class="link-button secondary">Get in Touch</a>
+            <a href="kontakt.html" class="link-button secondary">Kontakta Oss</a>
         </div>
 
         <div class="footer">
-            <p>&copy; 2024 pekelund.dev. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="om.html">Om Oss</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="integritet.html">Integritetspolicy</a>
+                <a href="villkor.html">Användarvillkor</a>
+            </div>
+            <p>&copy; 2024 pekelund.dev. Alla rättigheter förbehållna.</p>
         </div>
     </div>
 </body>
