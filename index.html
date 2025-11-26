@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Peter Ekelund - Developer & Tech Enthusiast">
-    <title>pekelund.dev</title>
+    <meta name="description" content="pekelund.dev - Pär Ekelund, developer and tech enthusiast. Resources on programming, web development and modern technology.">
+    <title>pekelund.dev - Developer & Tech Enthusiast</title>
     <style>
         * {
             margin: 0;
@@ -19,19 +19,47 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             padding: 20px;
         }
 
+        nav {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 15px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             padding: 60px 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            text-align: center;
         }
 
         h1 {
@@ -39,6 +67,7 @@
             margin-bottom: 10px;
             color: #667eea;
             font-weight: 700;
+            text-align: center;
         }
 
         .subtitle {
@@ -46,13 +75,25 @@
             color: #666;
             margin-bottom: 30px;
             font-weight: 300;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+            color: #764ba2;
+            font-weight: 600;
         }
 
         .description {
             font-size: 1.1rem;
             color: #555;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             line-height: 1.8;
+        }
+
+        .description p {
+            margin-bottom: 15px;
         }
 
         .links {
@@ -93,12 +134,55 @@
             color: white;
         }
 
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
         .footer {
             margin-top: 50px;
             padding-top: 30px;
             border-top: 1px solid #e0e0e0;
             color: #888;
             font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
         }
 
         .adsbygoogle {
@@ -106,11 +190,6 @@
         }
 
         @media (max-width: 768px) {
-            body {
-                align-items: flex-start;
-                padding-top: 40px;
-            }
-
             h1 {
                 font-size: 2.5rem;
             }
@@ -129,18 +208,19 @@
 
             .link-button {
                 width: 100%;
+                text-align: center;
             }
 
             .adsbygoogle {
                 margin: 20px 0;
             }
+
+            nav ul {
+                gap: 15px;
+            }
         }
 
         @media (max-width: 480px) {
-            body {
-                padding-top: 20px;
-            }
-
             h1 {
                 font-size: 2rem;
             }
@@ -162,16 +242,52 @@
             }
         }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263264917660441"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263264917660441" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <h1>pekelund.dev</h1>
         <p class="subtitle">Developer & Tech Enthusiast</p>
         
         <div class="description">
-            <p>Welcome! I'm passionate about building innovative solutions and exploring new technologies. This space showcases my journey in software development and tech.</p>
+            <p>Welcome to pekelund.dev! This website is created and maintained by Pär Ekelund, a passionate software developer with deep experience in programming and modern web development. The purpose of this platform is to serve as a hub for technical resources, insights, and projects in software development.</p>
+
+            <p>At pekelund.dev, you'll find information about my latest projects, technical guides, and experiences from my work in the IT industry. I strongly believe in sharing knowledge and experiences to help other developers on their technical journey. Whether you're a beginner wanting to learn the basics of programming or an experienced developer seeking new perspectives, I strive to offer valuable resources.</p>
+
+            <h2>What We Offer</h2>
+            <p>My expertise spans multiple areas of software development, including backend development, frontend design, and system architecture. I continuously work to update my skills and stay informed about the latest trends and tools in the tech industry. On this website, I share practical solutions and insights that I've gathered over the years.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Technical Projects</h3>
+                <p>Explore my latest development projects and open source contributions on GitHub.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Web Development</h3>
+                <p>Resources and insights on modern web development and best practices.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Programming Solutions</h3>
+                <p>Practical code examples and solutions to common technical challenges.</p>
+            </div>
+        </div>
+
+        <div class="description">
+            <h2>Transparency and Quality</h2>
+            <p>Quality and reliability are cornerstones in everything I create. I strive to deliver thoughtful and well-documented content that truly makes a difference. Transparency is also important to me – I'm clear about how this website works and how visitors' privacy is handled. You can read more about this in our <a href="privacy.html">privacy policy</a>.</p>
+
+            <p>Do you have questions, suggestions, or want to discuss a potential collaboration? I welcome all feedback and look forward to hearing from you. Feel free to visit the <a href="contact.html">contact page</a> to get in touch with me, or explore my projects on GitHub below.</p>
         </div>
 
         <!-- Ad Unit -->
@@ -187,10 +303,16 @@
 
         <div class="links">
             <a href="https://github.com/pekelund-dev" class="link-button" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:contact@pekelund.dev" class="link-button secondary">Get in Touch</a>
+            <a href="contact.html" class="link-button secondary">Contact Us</a>
         </div>
 
         <div class="footer">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
             <p>&copy; 2024 pekelund.dev. All rights reserved.</p>
         </div>
     </div>
